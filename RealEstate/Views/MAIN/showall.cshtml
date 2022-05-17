@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "showall";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<h2>showall</h2>
+
+<div>
+    <table style="border:dashed;">
+        <tr>
+            <td>ID</td>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>CNIC</td>
+            <td>Contact</td>
+            <td>Email ID</td>
+            <td>Address</td>
+            <td>City</td>
+            <td>CustomerState</td>
+            <td>Gender</td>
+            <td>FBR Status</td>
+            <td>Password</td>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+            <td>@item.CNIC</td>
+            <td>@item.EmailID</td>
+            <td>@item.CustomerAddress</td>
+            <td>@item.City</td>
+            <td>@item.Gender</td>
+            <td>@item.CustomerFBRStatus</td>
+            <td>@item.Password</td>
+
+        </tr>
+        }
+
+    </table>
+</div>
